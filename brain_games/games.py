@@ -30,19 +30,7 @@ def calc(name):
     for i in range(n):
         a = randint(1, 10)
         b = randint(1, 10)
-        task_number = randint(1, 3)
-
-        if task_number == 1:
-            task = str(a) + '+' + str(b)
-            correct_answer = str(a + b)
-
-        if task_number == 2:
-            task = str(a) + '-' + str(b)
-            correct_answer = str(a - b)
-
-        if task_number == 3:
-            task = str(a) + '*' + str(b)
-            correct_answer = str(a * b)
+        correct_answer, task = main_functions.answer_for_calc(a, b)
 
         user_answer = main_functions.ask_user(task)
 

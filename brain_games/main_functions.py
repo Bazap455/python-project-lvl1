@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+from random import randint
+
 
 def print_game_info():
     print('Answer "yes" if the number is even, otherwise answer "no".')
@@ -24,6 +26,24 @@ def even_test(num):
         correct_answer = 'no'
 
     return(correct_answer)
+
+
+def answer_for_calc(a, b):
+    task_number = randint(1, 3)
+
+    if task_number == 1:
+        task = str(a) + '+' + str(b)
+        correct_answer = str(a + b)
+
+    if task_number == 2:
+        task = str(a) + '-' + str(b)
+        correct_answer = str(a - b)
+
+    if task_number == 3:
+        task = str(a) + '*' + str(b)
+        correct_answer = str(a * b)
+
+    return(correct_answer, task)
 
 
 def check(user_answer, correct_answer):
