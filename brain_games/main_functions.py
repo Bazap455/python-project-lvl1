@@ -57,6 +57,25 @@ def gcd(a, b):
     return(b)
 
 
+def progression(length, hidden_pos):
+    a = randint(1, 10)
+    d = randint(1, 10)
+    progression = []
+    task = ''
+
+    for i in range(1, length + 1):
+        progression.append(a)
+        a += d
+
+        if i == hidden_pos:
+            task += '.. '
+            hidden_number = a
+        else:
+            task += str(a) + ' '
+
+    return(hidden_number, task)
+
+
 def check(user_answer, correct_answer):
 
     if user_answer == correct_answer:

@@ -59,5 +59,23 @@ def gcd(name):
             print('Congratulations, ', name, '!', sep='')
 
 
+def progression(name):
+    print('What number is missing in the progression?')
+    n = main_functions.number_of_rounds()
+
+    for i in range(n):
+        length = randint(5, 10)
+        hidden_pos = randint(1, length)
+        correct_answer, task = main_functions.progression(length, hidden_pos)
+        user_answer = int(main_functions.ask_user(task))
+
+        if not main_functions.check(user_answer, correct_answer):
+            print('Let`s try again, ', name, '!', sep='')
+            break
+
+        if i == n - 1:
+            print('Congratulations, ', name, '!', sep='')
+
+
 if __name__ == '__main__':
     print('Choose a game!')
