@@ -8,4 +8,4 @@
 ![flake8-test](https://github.com/Bazap455/python-project-lvl1/actions/workflows/flake8.yml/badge.svg)
 
 ### Asciinema of project
-[![asciicast](https://asciinema.org/a/UzEspGXpxFuTm1S1fGWo480RW.svg)](https://asciinema.org/a/UzEspGXpxFuTm1S1fGWo480RW)
+[![asciicast](https://asciinema.org/a/jjdCCNnPYOChwmetYplCzrdZo.svg)](https://asciinema.org/a/jjdCCNnPYOChwmetYplCzrdZo)

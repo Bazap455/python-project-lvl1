@@ -12,7 +12,7 @@ def even(name):
     for i in range(n):
         random_number = randint(1, 100)
         correct_answer = main_functions.even_test(random_number)
-        user_answer = str(main_functions.ask_user(random_number))
+        user_answer = main_functions.ask_user(random_number)
 
         if not main_functions.check(user_answer, correct_answer):
             print('Let`s try again, ', name, '!', sep='')
@@ -30,7 +30,7 @@ def calc(name):
         a = randint(1, 10)
         b = randint(1, 10)
         correct_answer, task = main_functions.answer_and_task_for_calc(a, b)
-        user_answer = main_functions.ask_user(task)
+        user_answer = int(main_functions.ask_user(task))
 
         if not main_functions.check(user_answer, correct_answer):
             print('Let`s try again, ', name, '!', sep='')
@@ -49,7 +49,7 @@ def gcd(name):
         b = randint(1, 20)
         task = str(a) + ' ' + str(b)
         correct_answer = main_functions.gcd(a, b)
-        user_answer = main_functions.ask_user(task)
+        user_answer = int(main_functions.ask_user(task))
 
         if not main_functions.check(user_answer, correct_answer):
             print('Let`s try again, ', name, '!', sep='')
@@ -57,7 +57,6 @@ def gcd(name):
 
         if i == n - 1:
             print('Congratulations, ', name, '!', sep='')
-
 
 
 if __name__ == '__main__':
