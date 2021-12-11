@@ -3,10 +3,6 @@
 from random import randint
 
 
-def print_game_info():
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-
-
 def number_of_rounds():
     n = 3   # Number of rounds
     return(n)

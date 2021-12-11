@@ -3,11 +3,10 @@
 
 from random import randint
 from . import main_functions
-# from main_functions import print_game_info
 
 
 def even(name):
-    main_functions.print_game_info()
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     n = main_functions.number_of_rounds()
 
     for i in range(n):
@@ -24,7 +23,7 @@ def even(name):
 
 
 def calc(name):
-    main_functions.print_game_info()
+    print('What is the result of the expression?')
     n = main_functions.number_of_rounds()
 
     for i in range(n):
