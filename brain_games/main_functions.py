@@ -10,7 +10,7 @@ def number_of_rounds():
 
 def ask_user(task):
     print('Question:', task)
-    user_answer = str(input())
+    user_answer = int(input())
     print('Your answer:', user_answer)
     return(user_answer)
 
@@ -24,22 +24,35 @@ def even_test(num):
     return(correct_answer)
 
 
-def answer_for_calc(a, b):
+def answer_and_task_for_calc(a, b):
     task_number = randint(1, 3)
 
     if task_number == 1:
         task = str(a) + '+' + str(b)
-        correct_answer = str(a + b)
+        correct_answer = a + b
 
     if task_number == 2:
         task = str(a) + '-' + str(b)
-        correct_answer = str(a - b)
+        correct_answer = a - b
 
     if task_number == 3:
         task = str(a) + '*' + str(b)
-        correct_answer = str(a * b)
+        correct_answer = a * b
 
     return(correct_answer, task)
+
+
+def gcd(a, b):
+
+    if b > a: a, b = b, a
+
+    r = a % b
+
+    while r:
+        a, b = b, r
+        r = a % b
+    
+    return(b)
 
 
 def check(user_answer, correct_answer):
