@@ -15,7 +15,7 @@ def even(name):
         user_answer = main_functions.ask_user(random_number)
 
         if not main_functions.check(user_answer, correct_answer):
-            print('Let`s try again, ', name, '!', sep='')
+            print("Let's try again, ", name, '!', sep='')
             break
 
         if i == n - 1:
@@ -33,7 +33,7 @@ def calc(name):
         user_answer = main_functions.ask_user(task)
 
         if not main_functions.check(user_answer, correct_answer):
-            print('Let`s try again, ', name, '!', sep='')
+            print("Let's try again, ", name, '!', sep='')
             break
 
         if i == n - 1:
@@ -52,7 +52,7 @@ def gcd(name):
         user_answer = main_functions.ask_user(task)
 
         if not main_functions.check(user_answer, correct_answer):
-            print('Let`s try again, ', name, '!', sep='')
+            print("Let's try again, ", name, '!', sep='')
             break
 
         if i == n - 1:
@@ -70,7 +70,7 @@ def progression(name):
         user_answer = main_functions.ask_user(task)
 
         if not main_functions.check(user_answer, correct_answer):
-            print('Let`s try again, ', name, '!', sep='')
+            print("Let's try again, ", name, '!', sep='')
             break
 
         if i == n - 1:
@@ -92,7 +92,7 @@ def prime(name):
             correct_answer = 'no'
 
         if not main_functions.check(user_answer, correct_answer):
-            print('Let`s try again, ', name, '!', sep='')
+            print("Let's try again, ", name, '!', sep='')
             break
 
         if i == n - 1:

@@ -31,15 +31,15 @@ def answer_and_task_for_calc(a, b):
     task_number = randint(1, 3)
 
     if task_number == 1:
-        task = str(a) + '+' + str(b)
+        task = str(a) + ' + ' + str(b)
         correct_answer = a + b
 
     if task_number == 2:
-        task = str(a) + '-' + str(b)
+        task = str(a) + ' - ' + str(b)
         correct_answer = a - b
 
     if task_number == 3:
-        task = str(a) + '*' + str(b)
+        task = str(a) + ' * ' + str(b)
         correct_answer = a * b
 
     return(correct_answer, task)
