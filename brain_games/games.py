@@ -77,5 +77,27 @@ def progression(name):
             print('Congratulations, ', name, '!', sep='')
 
 
+def prime(name):
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    n = main_functions.number_of_rounds()
+
+    for i in range(n):
+        list_of_prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
+        random_number = randint(1, 40)
+        user_answer = main_functions.ask_user(random_number)
+
+        if random_number in list_of_prime_numbers:
+            correct_answer = 'yes'
+        else:
+            correct_answer = 'no'
+
+        if not main_functions.check(user_answer, correct_answer):
+            print('Let`s try again, ', name, '!', sep='')
+            break
+
+        if i == n - 1:
+            print('Congratulations, ', name, '!', sep='')
+
+
 if __name__ == '__main__':
     print('Choose a game!')

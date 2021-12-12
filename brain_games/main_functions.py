@@ -11,8 +11,8 @@ def number_of_rounds():
 def ask_user(task):
     print('Question:', task)
     user_answer = str(input())
-    user_answer = user_answer.strip(' ') # Delet extra spaces
-    user_answer = user_answer.lower()
+    user_answer = user_answer.strip(' ')    # Delet extra spaces.
+    user_answer = user_answer.lower()       # Input is case insensitive.
     print('Your answer:', user_answer)
     return(user_answer)
 
