@@ -1,11 +1,26 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Bazap455/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Bazap455/python-project-lvl1/actions)
 
-### Code Climate Maintainability Badge
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-### Flake8-test Badge
 ![flake8-test](https://github.com/Bazap455/python-project-lvl1/actions/workflows/flake8.yml/badge.svg)
 
+
+Welcome to the Brain Games!
+
+There are 5 games available to you.
+
+     1 Game: "Parity check" (brain-even)
+     2 Game: "Calculator" (brain-calc)
+     3 Game: "Least common divisor" (brain-gcd)
+     4 Game: "Arithmetic Progression" (brain-progression)
+     5 Game: "Prime check" (brain-prime) 
+
+Install, launch the games and follow the instructions.
+For you, below is a visual demonstration.
+
+Good luck!
+
+
 ### Asciinema of project
-[![asciicast](https://asciinema.org/a/XDZcbedLltCv7CRZJfdv21Rqr.svg)](https://asciinema.org/a/XDZcbedLltCv7CRZJfdv21Rqr)
+[![asciicast](https://asciinema.org/a/mCnYpMfrGwD7m1rIjeH1haJAZ.svg)](https://asciinema.org/a/mCnYpMfrGwD7m1rIjeH1haJAZ)
