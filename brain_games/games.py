@@ -30,7 +30,7 @@ def calc(name):
         a = randint(1, 10)
         b = randint(1, 10)
         correct_answer, task = main_functions.answer_and_task_for_calc(a, b)
-        user_answer = int(main_functions.ask_user(task))
+        user_answer = main_functions.ask_user(task)
 
         if not main_functions.check(user_answer, correct_answer):
             print('Let`s try again, ', name, '!', sep='')
@@ -49,7 +49,7 @@ def gcd(name):
         b = randint(1, 20)
         task = str(a) + ' ' + str(b)
         correct_answer = main_functions.gcd(a, b)
-        user_answer = int(main_functions.ask_user(task))
+        user_answer = main_functions.ask_user(task)
 
         if not main_functions.check(user_answer, correct_answer):
             print('Let`s try again, ', name, '!', sep='')
@@ -67,7 +67,7 @@ def progression(name):
         length = randint(5, 10)
         hidden_pos = randint(1, length)
         correct_answer, task = main_functions.progression(length, hidden_pos)
-        user_answer = int(main_functions.ask_user(task))
+        user_answer = main_functions.ask_user(task)
 
         if not main_functions.check(user_answer, correct_answer):
             print('Let`s try again, ', name, '!', sep='')

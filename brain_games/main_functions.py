@@ -11,6 +11,8 @@ def number_of_rounds():
 def ask_user(task):
     print('Question:', task)
     user_answer = str(input())
+    user_answer = user_answer.strip(' ') # Delet extra spaces
+    user_answer = user_answer.lower()
     print('Your answer:', user_answer)
     return(user_answer)
 
@@ -77,6 +79,7 @@ def progression(length, hidden_pos):
 
 
 def check(user_answer, correct_answer):
+    correct_answer = str(correct_answer)
 
     if user_answer == correct_answer:
         print('Correct!')
