@@ -11,13 +11,8 @@ A = 1       # Lower limit of the range of numbers used in the game
 B = 100     # Upper limit of the range of numbers used in the game.
 
 
-def get_random_number():
-    random_number = randint(A, B)
-    return random_number
-
-
 def get_correct_answer():
-    correct_answer = get_random_number()
+    correct_answer = randint(A, B)
     return correct_answer
 
 
@@ -33,7 +28,7 @@ def main(username):
         task = get_text_of_task(correct_answer)
         engine.ask_user(task)
         user_answer = engine.get_user_answer()
-        result = engine.check_answer(user_answer)
+        result = engine.check_answer(user_answer, correct_answer)
 
         if result:
             engine.next_round()
