@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Bazap455/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Bazap455/python-project-lvl1/actions)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1a426ec9438e86ad1074/maintainability)](https://codeclimate.com/github/Bazap455/python-project-lvl1/maintainability)
 
 ![flake8-test](https://github.com/Bazap455/python-project-lvl1/actions/workflows/flake8.yml/badge.svg)
 
