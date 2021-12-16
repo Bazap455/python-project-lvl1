@@ -43,7 +43,7 @@ def main(username):
             continue
         else:
             engine.game_over(username, user_answer, correct_answer)
-            break    
+            break
     else:
         engine.user_win(username)
 

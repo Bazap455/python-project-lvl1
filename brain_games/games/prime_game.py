@@ -11,12 +11,12 @@ MAX_NUMBER = 40     # Max number in the game.
 
 
 def prime_test(number):
-    
+
     if number in list_of_prime_numbers:
         correct_answer = 'yes'
     else:
         correct_answer = 'no'
-    
+
     return(correct_answer)
 
 

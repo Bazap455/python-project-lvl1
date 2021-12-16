@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-from random import randint
-
 
 NUMBER_OF_ROUNDS = 3   # Number of rounds
 

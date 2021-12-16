@@ -20,7 +20,7 @@ def get_progression(length):
     for i in range(1, length + 1):
         progression.append(a)
         a += D
-    
+
     return(progression)
 
 
@@ -33,7 +33,7 @@ def get_task(progression, hidden_pos):
             task += '.. '
         else:
             task += str(progression[i - 1]) + ' '
-    
+
     return(task)
 
 
