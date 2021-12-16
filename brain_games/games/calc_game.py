@@ -42,8 +42,10 @@ def main(username):
             engine.next_round()
             continue
         else:
-            engine.game_over(username)
-            break
+            engine.game_over(username, user_answer, correct_answer)
+            break    
+    else:
+        engine.user_win(username)
 
 
 if __name__ == '__main__':
