@@ -11,21 +11,22 @@ A = 1       # Lower limit of the range of numbers used in the game
 B = 100     # Upper limit of the range of numbers used in the game.
 
 
-def get_correct_answer():
-    correct_answer = randint(A, B)
-    return correct_answer
+def even_test(num):
 
+    if num % 2 == 0:
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
 
-def get_text_of_task(correct_answer):
-    text_of_task = str(correct_answer)
-    return text_of_task
+    return(correct_answer)
 
 
 def main(username):
 
     for i in range(n):
-        correct_answer = get_correct_answer()
-        task = get_text_of_task(correct_answer)
+        num = randint(A, B)
+        correct_answer = even_test(num)
+        task = str(num)
         engine.ask_user(task)
         user_answer = engine.get_user_answer()
         result = engine.check_answer(user_answer, correct_answer)
@@ -34,8 +35,10 @@ def main(username):
             engine.next_round()
             continue
         else:
-            engine.game_over(username)
-            break
+            engine.game_over(username, user_answer, correct_answer)
+            break    
+    else:
+        engine.user_win(username)
 
 
 if __name__ == '__main__':
