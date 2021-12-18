@@ -2,24 +2,20 @@
 
 
 from random import randint
-from brain_games import engine
 
 
-text_of_rules = 'What number is missing in the progression?'
-n = engine.NUMBER_OF_ROUNDS
-A = 5       # The smallest number of members in a progression.
-B = 10      # The biggest number of members in a progression.
-A1 = randint(1, 10)     # First member of progression.
-D = randint(1, 10)      # Difference of successive members
+TEXT_OF_RULES = 'What number is missing in the progression?'
+min_num = 5       # The smallest number of members in a progression.
+max_num = 10      # The biggest number of members in a progression.
 
 
-def get_progression(length):
-    a = A1
+def get_progression(a1, d, length):
+    a = a1
     progression = []
 
     for i in range(1, length + 1):
         progression.append(a)
-        a += D
+        a += d
 
     return(progression)
 
@@ -37,31 +33,15 @@ def get_task(progression, hidden_pos):
     return(task)
 
 
-def get_correct_answer(progression, hidden_pos):
+def main():
+    a1 = randint(1, 10)     # First member of progression.
+    d = randint(1, 10)      # Difference of successive members
+    length = randint(min_num, max_num)
+    hidden_pos = randint(1, length)
+    progression = get_progression(a1, d, length)
+    task = get_task(progression, hidden_pos)
     correct_answer = progression[hidden_pos - 1]
-    return(correct_answer)
-
-
-def main(username):
-
-    for i in range(n):
-        length = randint(A, B)
-        hidden_pos = randint(1, length)
-        progression = get_progression(length)
-        task = get_task(progression, hidden_pos)
-        correct_answer = get_correct_answer(progression, hidden_pos)
-        engine.ask_user(task)
-        user_answer = engine.get_user_answer()
-        result = engine.check_answer(user_answer, correct_answer)
-
-        if result:
-            engine.next_round()
-            continue
-        else:
-            engine.game_over(username, user_answer, correct_answer)
-            break
-    else:
-        engine.user_win(username)
+    return correct_answer, task
 
 
 if __name__ == '__main__':
