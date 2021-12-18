@@ -1,11 +1,7 @@
 #!/usr/bin/env python
 
 
-NUMBER_OF_ROUNDS = 3   # Number of rounds
-
-
-def ask_user(task):
-    print('Question:', task)
+from brain_games import welcome_user
 
 
 def get_user_answer():
@@ -25,15 +21,28 @@ def check_answer(user_answer, correct_answer):
         return(False)
 
 
-def next_round():
-    print('Correct!')
-
-
 def game_over(username, user_answer, correct_answer):
     print("'", user_answer, "' ", 'is wrong answer ;(.', sep='', end=' ')
     print('Correct answer was ', "'", correct_answer, "'.", sep='')
     print("Let's try again, ", username, '!', sep='')
 
 
-def user_win(username):
-    print('Congratulations, ', username, '!', sep='')
+def run(game):
+    n = 3   # Number of rounds
+    username = welcome_user.get_username()
+    print(game.TEXT_OF_RULES)
+
+    for i in range(n):
+        correct_answer, task = game.main()
+        print('Question:', task)
+        user_answer = get_user_answer()
+        result = check_answer(user_answer, correct_answer)
+
+        if result:
+            print('Correct!')
+            continue
+        else:
+            game_over(username, user_answer, correct_answer)
+            break
+    else:
+        print('Congratulations, ', username, '!', sep='')
