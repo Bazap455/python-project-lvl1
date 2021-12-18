@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 
-from brain_games import welcome_user
+from brain_games import engine
 from brain_games.games import calc_game
 
 
 def main():
-    name = welcome_user.get_name()
-    calc_game.main(name)
+    engine.run(calc_game)
 
 
 if __name__ == '__main__':
