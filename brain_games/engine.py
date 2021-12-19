@@ -22,9 +22,12 @@ def check_answer(user_answer, correct_answer):
 
 
 def game_over(username, user_answer, correct_answer):
-    print("'", user_answer, "' ", 'is wrong answer ;(.', sep='', end=' ')
-    print('Correct answer was ', "'", correct_answer, "'.", sep='')
-    print("Let's try again, ", username, '!', sep='')
+    template = "'{}' is wrong answer ;(. Correct answer was '{}'.\n\
+Let's try again, {}!"
+    # print("'", user_answer, "' ", 'is wrong answer ;(.', sep='', end=' ')
+    # print('Correct answer was ', "'", correct_answer, "'.", sep='')
+    # print("Let's try again, ", username, '!', sep='')
+    print(template.format(user_answer, correct_answer, username))
 
 
 def run(game):
@@ -45,4 +48,6 @@ def run(game):
             game_over(username, user_answer, correct_answer)
             break
     else:
-        print('Congratulations, ', username, '!', sep='')
+        template = "Congratulations, {}!"
+        print(template.format(username))
+        # print('Congratulations, ', username, '!', sep='')
