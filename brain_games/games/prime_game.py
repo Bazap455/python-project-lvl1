@@ -3,26 +3,22 @@
 
 from random import randint
 
-TEXT_OF_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-list_of_prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
-max_num = 40     # Max number in the game.
+
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def prime_test(number):
+def is_prime(num):
+    for i in range(2, num):
 
-    if number in list_of_prime_numbers:
-        correct_answer = 'yes'
+        if num % i == 0:
+            return False
+
+    return True
+
+
+def generate_round():
+    num = randint(1, 40)
+    if is_prime(num):
+        return 'yes', num
     else:
-        correct_answer = 'no'
-
-    return(correct_answer)
-
-
-def main():
-    task = randint(1, max_num)
-    correct_answer = prime_test(task)
-    return correct_answer, task
-
-
-if __name__ == '__main__':
-    main('username')
+        return 'no', num

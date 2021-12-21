@@ -1,33 +1,18 @@
 #!/usr/bin/env python
 
 
-from random import randint
+from random import randint, choice
+from operator import add, sub, mul
 
 
-TEXT_OF_RULES = 'What is the result of the expression?'
-min_num = 1       # Lower limit of the range of numbers used in the game
-max_num = 10      # Upper limit of the range of numbers used in the game.
+DESCRIPTION = 'What is the result of the expression?'
 
 
-def main():
-    a = randint(min_num, max_num)
-    b = randint(min_num, max_num)
-    task_number = randint(1, 3)
-
-    if task_number == 1:
-        task = str(a) + ' + ' + str(b)
-        correct_answer = a + b
-
-    if task_number == 2:
-        task = str(a) + ' - ' + str(b)
-        correct_answer = a - b
-
-    if task_number == 3:
-        task = str(a) + ' * ' + str(b)
-        correct_answer = a * b
-
-    return(correct_answer, task)
-
-
-if __name__ == '__main__':
-    main('username')
+def generate_round():
+    a = randint(1, 10)
+    b = randint(1, 10)
+    list_of_operations = [('+', add), ('-', sub), ('*', mul)]
+    operation, function = choice(list_of_operations)
+    task = f'{a} {operation} {b}'
+    correct_answer = function(a, b)
+    return correct_answer, task
