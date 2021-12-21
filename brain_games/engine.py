@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 
-from brain_games import welcome_user
+from brain_games import cli
 
 
 def get_user_answer():
@@ -24,15 +24,12 @@ def check_answer(user_answer, correct_answer):
 def game_over(username, user_answer, correct_answer):
     template = "'{}' is wrong answer ;(. Correct answer was '{}'.\n\
 Let's try again, {}!"
-    # print("'", user_answer, "' ", 'is wrong answer ;(.', sep='', end=' ')
-    # print('Correct answer was ', "'", correct_answer, "'.", sep='')
-    # print("Let's try again, ", username, '!', sep='')
     print(template.format(user_answer, correct_answer, username))
 
 
 def run(game):
     n = 3   # Number of rounds
-    username = welcome_user.get_username()
+    username = cli.welcome_user()
     print(game.TEXT_OF_RULES)
 
     for i in range(n):
@@ -50,4 +47,3 @@ def run(game):
     else:
         template = "Congratulations, {}!"
         print(template.format(username))
-        # print('Congratulations, ', username, '!', sep='')
