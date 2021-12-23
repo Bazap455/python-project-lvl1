@@ -9,16 +9,13 @@ DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 def is_even(num):
 
-    if num % 2 == 0:
-        return True
-    else:
-        return False
+    return num % 2 == 0
 
 
 def generate_round():
     num = randint(1, 100)
-    task = str(num)
+    question = str(num)
     if is_even(num):
-        return 'yes', task
+        return 'yes', question
     else:
-        return 'no', task
+        return 'no', question

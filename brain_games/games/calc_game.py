@@ -13,6 +13,7 @@ def generate_round():
     b = randint(1, 10)
     list_of_operations = [('+', add), ('-', sub), ('*', mul)]
     operation, function = choice(list_of_operations)
-    task = f'{a} {operation} {b}'
+    question = f'{a} {operation} {b}'
     correct_answer = function(a, b)
-    return correct_answer, task
+    correct_answer = str(correct_answer)
+    return correct_answer, question

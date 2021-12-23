@@ -7,21 +7,23 @@ from random import randint
 DESCRIPTION = 'What number is missing in the progression?'
 
 
-def generate_round():
-    a1 = randint(1, 10)     # First member of progression.
-    d = randint(1, 10)      # Difference of successive members
-    length = randint(5, 10)
-    hidden_pos = randint(1, length)
+def get_progression(a1, d, length):
     progression = []
 
     for i in range(1, length + 1):
         ai = a1 + (i - 1) * d
+        progression.append(str(ai))
 
-        if i == hidden_pos:
-            progression.append("..")
-            correct_answer = ai
-        else:
-            progression.append(str(ai))
+    return progression
 
-    task = " ".join(progression)
-    return correct_answer, task
+
+def generate_round():
+    a1 = randint(1, 10)     # First member of progression.
+    d = randint(1, 10)      # Difference of successive members
+    length = randint(5, 10)
+    progression = get_progression(a1, d, length)
+    hidden_pos = randint(1, length)
+    correct_answer = str(progression[hidden_pos - 1])
+    progression[hidden_pos - 1] = '..'
+    question = " ".join(progression)
+    return correct_answer, question

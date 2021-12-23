@@ -25,5 +25,6 @@ def generate_round():
     a = randint(1, 20)
     b = randint(1, 20)
     correct_answer = gcd(a, b)
-    task = str(a) + ' ' + str(b)
-    return correct_answer, task
+    correct_answer = str(correct_answer)
+    question = str(a) + ' ' + str(b)
+    return correct_answer, question

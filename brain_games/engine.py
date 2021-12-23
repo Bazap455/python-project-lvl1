@@ -4,31 +4,28 @@
 from brain_games import cli
 
 
-n = 3   # Number of rounds
+NUMBER_OF_ROUNDS = 3
 
 
 def run(game):
     username = cli.welcome_user()
     print(game.DESCRIPTION)
 
-    for i in range(n):
-        correct_answer, task = game.generate_round()
-        print('Question:', task)
-        user_answer = str(input())
-        user_answer = user_answer.strip(' ')    # Delet extra spaces.
-        user_answer = user_answer.lower()       # Input is case insensitive.
+    for i in range(NUMBER_OF_ROUNDS):
+        correct_answer, question = game.generate_round()
+        print('Question:', question)
+        user_answer = input()
+        # user_answer = user_answer.strip(' ')    # Delet extra spaces.
+        # user_answer = user_answer.lower()       # Input is case insensitive.
         print('Your answer:', user_answer)
-        correct_answer = str(correct_answer)
 
         if user_answer == correct_answer:
             print('Correct!')
             continue
         else:
-            template = "'{}' is wrong answer ;(. Correct answer was '{}'.\n\
-Let's try again, {}!"
-            print(template.format(user_answer, correct_answer, username))
-            break
+            print(f"'{user_answer}' is wrong answer ;(. Correct answer was \
+'{correct_answer}'.\nLet's try again, {username}!")
+            return
 
     else:
-        template = "Congratulations, {}!"
-        print(template.format(username))
+        print(f'Congratulations, {username}!')
