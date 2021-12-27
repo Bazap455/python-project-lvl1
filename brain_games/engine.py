@@ -12,8 +12,6 @@ def run(game):
         correct_answer, question = game.generate_round()
         print('Question:', question)
         user_answer = input()
-        # user_answer = user_answer.strip(' ')    # Delet extra spaces.
-        # user_answer = user_answer.lower()       # Input is case insensitive.
         print('Your answer:', user_answer)
 
         if user_answer == correct_answer:
