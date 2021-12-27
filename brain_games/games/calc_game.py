@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-
 from random import randint, choice
 from operator import add, sub, mul
 

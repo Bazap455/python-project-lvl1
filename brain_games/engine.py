@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-
 from brain_games import cli
 
 
