@@ -7,8 +7,8 @@ DESCRIPTION = 'What number is missing in the progression?'
 def get_progression(a1, d, length):
     progression = []
 
-    for i in range(1, length + 1):
-        ai = a1 + (i - 1) * d
+    for i in range(length):
+        ai = a1 + i * d
         progression.append(str(ai))
 
     return progression
