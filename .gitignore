@@ -4,4 +4,8 @@ __pycache__/
 # Dependencies are not stored in the repository
 .venv
 
+# Unit test / coverage reports
+.coverage
+.coverage.*
+
 dist
